@@ -113,6 +113,8 @@ bash install.sh --uninstall    # Remove Zero Terminal
 ### macOS / Linux
 ```bash
 bash install.sh --uninstall
+# or
+bash <(curl -s https://raw.githubusercontent.com/tanvir-cpp/zero-terminal/main/uninstall.sh)
 ```
 
 ## Windows Terminal Color Scheme
@@ -187,7 +189,8 @@ zero-terminal/
 ├── README.md
 ├── install.ps1              # Windows installer
 ├── install.sh               # macOS/Linux installer
-├── uninstall.ps1            # Windows reverter
+├── uninstall.ps1            # Windows uninstaller
+├── uninstall.sh             # macOS/Linux uninstaller
 ├── theme/
 │   └── zero.omp.json        # Oh My Posh theme
 └── windows-terminal/
