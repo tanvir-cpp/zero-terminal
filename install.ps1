@@ -36,7 +36,7 @@ $ErrorActionPreference = 'Stop'
 # ─── Configuration ──────────────────────────────────────────────────────────
 $ThemeName    = "zero"
 $ThemeFile    = "$ThemeName.omp.json"
-$RepoOwner    = "YOUR_USERNAME"          # <-- Replace with your GitHub username
+$RepoOwner    = "tanvir-cpp"
 $RepoName     = "zero-terminal"
 $Branch       = "main"
 $RawBase      = "https://raw.githubusercontent.com/$RepoOwner/$RepoName/$Branch"

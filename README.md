@@ -23,12 +23,12 @@ A modern, clean, productivity-focused Windows Terminal theme powered by [Oh My P
 
 ## Install (one command)
 
-> **Before sharing**, replace `YOUR_USERNAME` in `install.ps1` with your GitHub username.
+> **Before sharing**, replace `tanvir-cpp` in `install.ps1` with your GitHub username.
 
 Open PowerShell and run:
 
 ```powershell
-irm https://raw.githubusercontent.com/YOUR_USERNAME/zero-terminal/main/install.ps1 | iex
+irm https://raw.githubusercontent.com/tanvir-cpp/zero-terminal/main/install.ps1 | iex
 ```
 
 That's it. The installer will:
@@ -44,7 +44,7 @@ Then restart Windows Terminal.
 
 ```powershell
 # 1. Clone the repo
-git clone https://github.com/YOUR_USERNAME/zero-terminal.git
+git clone https://github.com/tanvir-cpp/zero-terminal.git
 cd zero-terminal
 
 # 2. Run the installer
