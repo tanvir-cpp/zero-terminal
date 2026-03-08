@@ -14,6 +14,13 @@ A modern, clean, productivity-focused terminal theme powered by [Oh My Posh](htt
 - **Color-coded exit status** — green `❯` on success, red `✗` on error
 - **Transient prompt** — previous prompts collapse to keep scrollback clean
 
+## Preview
+
+### Windows
+![Windows Preview](assets/windows-preview.png)
+
+> macOS screenshot coming soon.
+
 ## Prompt Layout
 
 ```
