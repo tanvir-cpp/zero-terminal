@@ -194,10 +194,14 @@ All platforms require an internet connection for initial install.
 ```
 zero-terminal/
 ├── README.md
+├── CHANGELOG.md
+├── LICENSE
 ├── install.ps1              # Windows installer
 ├── install.sh               # macOS/Linux installer
 ├── uninstall.ps1            # Windows uninstaller
 ├── uninstall.sh             # macOS/Linux uninstaller
+├── assets/
+│   └── windows-preview.png  # Windows terminal screenshot
 ├── theme/
 │   └── zero.omp.json        # Oh My Posh theme
 └── windows-terminal/
