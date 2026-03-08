@@ -1,6 +1,6 @@
 # Zero Terminal
 
-A modern, clean, productivity-focused Windows Terminal theme powered by [Oh My Posh](https://ohmyposh.dev/).
+A modern, clean, productivity-focused terminal theme powered by [Oh My Posh](https://ohmyposh.dev/). Works on Windows, macOS, and Linux.
 
 ## Features
 
@@ -17,13 +17,13 @@ A modern, clean, productivity-focused Windows Terminal theme powered by [Oh My P
 ## Prompt Layout
 
 ```
- [Windows]  ~/projects/myapp  main * 2  ⎻⎻⎻⎻⎻⎻⎻⎻⎻  ⏱ 3.2s   14:35
+ [OS]  ~/projects/myapp  main * 2  ⎻⎻⎻⎻⎻⎻⎻⎻⎻  ⏱ 3.2s   14:35
  ❯
 ```
 
 ## Install (one command)
 
-> **Before sharing**, replace `tanvir-cpp` in `install.ps1` with your GitHub username.
+### Windows
 
 Open PowerShell and run:
 
@@ -31,8 +31,7 @@ Open PowerShell and run:
 irm https://raw.githubusercontent.com/tanvir-cpp/zero-terminal/main/install.ps1 | iex
 ```
 
-That's it. The installer will:
-
+The installer will:
 1. Install **Oh My Posh** (via winget, scoop, or the official installer)
 2. Install **CaskaydiaCove Nerd Font** (icon support)
 3. Copy the theme to your Oh My Posh themes directory
@@ -40,7 +39,25 @@ That's it. The installer will:
 
 Then restart Windows Terminal.
 
+### macOS / Linux
+
+Open your terminal and run:
+
+```bash
+bash <(curl -s https://raw.githubusercontent.com/tanvir-cpp/zero-terminal/main/install.sh)
+```
+
+The installer will:
+1. Install **Oh My Posh** (via Homebrew on macOS, or official script on Linux)
+2. Install **CaskaydiaCove Nerd Font** (icon support)
+3. Copy the theme to `~/.config/oh-my-posh/themes/`
+4. Update your `~/.zshrc` or `~/.bashrc` automatically
+
+Then restart your terminal.
+
 ## Manual Install
+
+### Windows
 
 ```powershell
 # 1. Clone the repo
@@ -54,22 +71,48 @@ cd zero-terminal
 . $PROFILE
 ```
 
-## Skip options
+### macOS / Linux
+
+```bash
+# 1. Clone the repo
+git clone https://github.com/tanvir-cpp/zero-terminal.git
+cd zero-terminal
+
+# 2. Run the installer
+bash install.sh
+
+# 3. Reload your profile
+source ~/.zshrc
+```
+
+## Options
+
+### Windows
 
 ```powershell
-# Skip font installation (if you already have a Nerd Font)
-.\install.ps1 -NoFont
+.\install.ps1 -NoFont      # Skip font installation
+.\install.ps1 -NoProfile   # Skip profile modification
+.\install.ps1 -Uninstall   # Remove Zero Terminal
+```
 
-# Skip profile modification
-.\install.ps1 -NoProfile
+### macOS / Linux
+
+```bash
+bash install.sh --no-font      # Skip font installation
+bash install.sh --no-profile   # Skip profile modification
+bash install.sh --uninstall    # Remove Zero Terminal
 ```
 
 ## Uninstall
 
+### Windows
 ```powershell
 .\uninstall.ps1
-# or
-.\install.ps1 -Uninstall
+```
+
+### macOS / Linux
+```bash
+bash install.sh --uninstall
 ```
 
 ## Windows Terminal Color Scheme
@@ -129,22 +172,26 @@ Add this to your `settings.json` under `"schemes"`, then set `"colorScheme": "Ze
 
 ## Requirements
 
-- Windows 10 / 11
-- Windows Terminal (recommended) or any terminal that supports ANSI
-- PowerShell 5.1+ or PowerShell 7+
-- Internet connection (for initial install)
+| Platform | Requirements |
+|----------|-------------|
+| Windows  | Windows 10/11, PowerShell 5.1+, Windows Terminal |
+| macOS    | macOS 10.15+, zsh or bash, any terminal |
+| Linux    | zsh or bash, any terminal with ANSI support |
+
+All platforms require an internet connection for initial install.
 
 ## File Structure
 
 ```
 zero-terminal/
 ├── README.md
-├── install.ps1              # One-command installer
-├── uninstall.ps1            # Reverter
+├── install.ps1              # Windows installer
+├── install.sh               # macOS/Linux installer
+├── uninstall.ps1            # Windows reverter
 ├── theme/
 │   └── zero.omp.json        # Oh My Posh theme
 └── windows-terminal/
-    └── zero-scheme.json     # Color scheme (for reference)
+    └── zero-scheme.json     # Windows Terminal color scheme
 ```
 
 ## License
